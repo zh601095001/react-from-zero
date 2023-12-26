@@ -1,20 +1,19 @@
 const fakeFetch = () => {
 	return new Promise((resolve, reject) => {
-		setTimeout(()=>{
+		setTimeout(() => {
 			resolve(10)
 		})
 	})
 }
 
-
-function f(){
+function f() {
 	throw fakeFetch()
 }
 
-function f2(){
-	try{
+function f2() {
+	try {
 		f()
-	}catch (e){
+	} catch (e) {
 		console.log(e)
 	}
 }

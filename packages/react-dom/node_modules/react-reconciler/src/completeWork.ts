@@ -3,7 +3,8 @@ import { HostComponent, HostRoot, HostText } from './workTags'
 import {
 	appendInitialChild,
 	createInstance,
-	createTextInstance, Instance
+	createTextInstance,
+	Instance
 } from 'hostConfig'
 import { NoFlags } from './fiberFlags'
 
