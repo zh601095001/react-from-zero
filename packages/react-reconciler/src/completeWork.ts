@@ -1,5 +1,10 @@
 import { FiberNode } from './fiber'
-import { HostComponent, HostRoot, HostText } from './workTags'
+import {
+	FunctionComponent,
+	HostComponent,
+	HostRoot,
+	HostText
+} from './workTags'
 import {
 	appendInitialChild,
 	createInstance,
@@ -39,6 +44,10 @@ export const completeWork = (wip: FiberNode) => {
 			 */
 			bubbleProperties(wip)
 			return null
+		case FunctionComponent:
+			bubbleProperties(wip)
+			return null
+
 		default:
 			if (__DEV__) {
 				console.warn('未处理的completeWork情况', wip)
